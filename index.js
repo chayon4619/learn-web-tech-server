@@ -11,6 +11,14 @@ app.get('/', (req, res) => {
     res.send(data);
 })
 
+app.get('/course/:id', (req, res) => {
+    const id = req.params.id;
+    const selectedData = data.find(d => d.id === id);
+    res.send(selectedData);
+
+
+})
+
 
 app.listen(port, () => {
     console.log('dragon news running on', port)
