@@ -11,6 +11,8 @@ app.get('/', (req, res) => {
     res.send(data);
 })
 
+
+
 app.get('/course/:id', (req, res) => {
     const id = req.params.id;
     const selectedData = data.find(d => d.id === id);
